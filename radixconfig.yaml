@@ -9,10 +9,9 @@ spec:
         from: master
     - name: prod
   components:
-    - name: main
+    - name: api.py
       src: "."
       publicPort: http
       ports:
        - name: http
          port: 5000
-         
