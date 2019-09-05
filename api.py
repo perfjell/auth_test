@@ -23,7 +23,7 @@ def token_required(f):
 
 @app.route('/')
 def hello():
-    return jsonify({'message':'Hello'})
+    return jsonify({'message':'Hello gts 80'})
 @app.route('/unprotected')
 def unprotected():
     return jsonify({'message': 'Anyone can view this!'})
