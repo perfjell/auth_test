@@ -9,7 +9,7 @@ spec:
         from: master
     - name: prod
   components:
-    - name: api.py
+    - name: logonapp
       src: "."
       publicPort: http
       ports:
