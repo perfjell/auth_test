@@ -5,5 +5,3 @@ RUN pip install flask
 RUN pip install pyjwt
 EXPOSE 80
 CMD ["python", "./api.py"]
-
-
