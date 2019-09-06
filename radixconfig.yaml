@@ -10,7 +10,6 @@ spec:
     - name: prod
 
   components:
-    
     - name: logonapp
       src: .
       publicPort: http
@@ -20,4 +19,3 @@ spec:
       public: true
       replicas: 1
 
-      
