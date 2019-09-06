@@ -16,7 +16,7 @@ spec:
       src: .
       replicas: 1
 
-      #publicPort: http
+      
       ports:
        - name: http
          port: 80
