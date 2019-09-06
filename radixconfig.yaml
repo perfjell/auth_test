@@ -8,15 +8,16 @@ spec:
       build:
         from: master
     - name: prod
+      build:
+        from: master
 
   components:
-
+    
     - name: logonapp
        environmentConfig:
-        - environment: prod
-          replicas: 1
         - environment: dev
-          replicas: 1
+          replicas: 2
+      
       src: .
       publicPort: http
       ports:
