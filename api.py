@@ -23,7 +23,7 @@ def token_required(f):
 
 @app.route('/')
 def hello():
-    return jsonify({'message':'Hello gts 80'})
+    return jsonify({'message':'Hello '})
 @app.route('/unprotected')
 def unprotected():
     return jsonify({'message': 'Anyone can view this!'})
@@ -39,4 +39,4 @@ def login():
         return jsonify({'token':token.decode('UTF-8')})
     return make_response('Could not verify!',401,{'www-Authenticate': 'Basic  realm="Login Required"'})
 if __name__ == '__main__':
-    app.run(debug=True)#, port=int(80))
+    app.run(host='0.0.0.0',debug=True)#, port=int(80))

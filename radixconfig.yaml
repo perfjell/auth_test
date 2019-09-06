@@ -14,6 +14,6 @@ spec:
       publicPort: http
       ports:
        - name: http
-         port: 5000
+         port: 80
       public: true
       
