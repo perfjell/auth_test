@@ -39,4 +39,4 @@ def login():
         return jsonify({'token':token.decode('UTF-8')})
     return make_response('Could not verify!',401,{'www-Authenticate': 'Basic  realm="Login Required"'})
 if __name__ == '__main__':
-    app.run(debug=True, port=int(80))
+    app.run(debug=True)#, port=int(80))
