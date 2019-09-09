@@ -120,5 +120,7 @@ def information():
 
 
 
+# if __name__ == "__main__":
+#     app.run(host='localhost', port=env.get('PORT', 3000))
 if __name__ == "__main__":
-    app.run(host='localhost', port=env.get('PORT', 3000))
+    app.run(host='localhost', port=env.get('PORT', 80))

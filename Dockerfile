@@ -18,4 +18,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 ADD . /home/app
 CMD python server.py
 
-EXPOSE 3000
+EXPOSE 80
