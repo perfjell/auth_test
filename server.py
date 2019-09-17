@@ -116,7 +116,7 @@ def secrets():
 
 @app.route('/information')
 def information():
-    return  'go here if you want to know a secret</a>'
+    return  '<a>Go  <a href="secrets">here</a> if you want to know a secret</a>'
 
 
 
