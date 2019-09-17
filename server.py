@@ -27,6 +27,7 @@ AUTH0_CLIENT_SECRET = env.get(constants.AUTH0_CLIENT_SECRET)
 AUTH0_DOMAIN = env.get(constants.AUTH0_DOMAIN)
 AUTH0_BASE_URL = 'https://' + AUTH0_DOMAIN
 AUTH0_AUDIENCE = env.get(constants.AUTH0_AUDIENCE)
+
 if AUTH0_AUDIENCE is '':
     AUTH0_AUDIENCE = AUTH0_BASE_URL + '/userinfo'
 
@@ -89,12 +90,12 @@ def callback_handling():
     return redirect('/dashboard')
 
 
-# @app.route('/login')
-# def login():
-#     return auth0.authorize_redirect(redirect_uri=AUTH0_CALLBACK_URL, audience=AUTH0_AUDIENCE)
 @app.route('/login')
 def login():
-    return auth0.authorize_redirect( audience=AUTH0_AUDIENCE)
+    return auth0.authorize_redirect(redirect_uri=AUTH0_CALLBACK_URL, audience=AUTH0_AUDIENCE)
+#@app.route('/login')
+#def login():
+#    return auth0.authorize_redirect( audience=AUTH0_AUDIENCE)
 
 
 @app.route('/logout')
