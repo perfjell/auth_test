@@ -3,14 +3,15 @@ kind: RadixApplication
 metadata:
   name: auth-test
 spec:
+  build:
+    secrets:
+      - SECRET_1
+      - SECRET_2
   environments:
     - name: dev
       build:
         from: master
-    - name: prod
-      build:
-        from: master
-
+    
   components:
     - name: logonapp
       src: .
